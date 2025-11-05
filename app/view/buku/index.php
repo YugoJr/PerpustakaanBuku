@@ -14,7 +14,8 @@
             <button id="menuToggle" class="menu-toggle" aria-label="Buka menu">☰</button>
             <nav class="main-nav" id="mainNav" aria-label="Main navigation">
                 <a href="#" class="active">Beranda</a>
-                <a href="../app/view/Akun/register.php">Masuk</a>
+                <a href="../app/view/Akun/login.php">Login</a>
+                <a href="../app/view/Akun/register.php">Register</a>
             </nav>
         </div>
     </header>
