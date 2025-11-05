@@ -14,7 +14,7 @@
             <button id="menuToggle" class="menu-toggle" aria-label="Buka menu">☰</button>
             <nav class="main-nav" id="mainNav" aria-label="Main navigation">
                 <a href="#" class="active">Beranda</a>
-                <a href="../app/controller/akuncontroller.php">Masuk</a>
+                <a href="../app/view/Akun/register.php">Masuk</a>
             </nav>
         </div>
     </header>
@@ -75,7 +75,7 @@
 
         <section id="about" class="container about">
             <h2>Tentang</h2>
-            <p class="small muted">Ini adalah contoh desain antarmuka untuk aplikasi perpustakaan sederhana, dibuat dengan HTML, CSS dan JavaScript.</p>
+            <p class="small muted">Ini adalah aplikasi perpustakaan sederhana.</p>
         </section>
     </main>
 
