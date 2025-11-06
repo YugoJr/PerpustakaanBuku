@@ -1,4 +1,5 @@
 <?php
+
 require_once __DIR__ . '/../../controller/akuncontroller.php'; // sesuaikan jika lokasi berbeda
 $db = new Database();
 $conn = $db->getConnection();
@@ -48,7 +49,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div style="color:green;"><?php echo htmlspecialchars($success); ?></div>
 <?php endif; ?>
 
+<link rel="stylesheet" href="register.css">
+
 <form method="POST" action="">
+    <a href="javascript:history.back()" class="back-btn">← Kembali</a>
     <input type="text" name="username" placeholder="Username" value="<?php echo htmlspecialchars($_POST['username'] ?? ''); ?>"><br>
     <input type="email" name="email" placeholder="Email" value="<?php echo htmlspecialchars($_POST['email'] ?? ''); ?>"><br>
     <input type="password" name="password" placeholder="Password"><br>
