@@ -32,6 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
+<link rel="stylesheet" href="stylelogin.css">
 
 <?php foreach ($errors as $err): ?>
     <div style="color:red;"><?php echo htmlspecialchars($err); ?></div>

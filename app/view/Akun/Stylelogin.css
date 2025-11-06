@@ -1,0 +1,84 @@
+/* ===== Style Login Page (Putih + Bayangan Lebih Kuat) ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Form card */
+form {
+  background: #fefefe;
+  padding: 45px 40px;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15),
+              0 4px 10px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Animasi kecil saat hover */
+form:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18),
+              0 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Error message */
+div[style*="color:red"] {
+  background: rgba(255, 0, 0, 0.08);
+  color: #c0392b !important;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="password"] {
+  padding: 13px;
+  border: 1px solid #dcdde1;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.15);
+}
+
+/* Button */
+button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #5dade2;
+  transform: scale(1.02);
+}
+
+/* Placeholder text */
+::placeholder {
+  color: #b2bec3;
+}
