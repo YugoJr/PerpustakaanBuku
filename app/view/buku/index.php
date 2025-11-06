@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<?php if (!isset($data) || !is_array($data)) { $data = []; } ?>
 <html lang="id">
 <head>
     <meta charset="utf-8" />
@@ -45,24 +44,18 @@
 <a href="../public/index.php?action=create">Tambah Buku</a>
 <table border="1" cellpadding="6">
     <tr><th>ID</th><th>Buku</th><th>Author</th><th>Tahun</th><th>Aksi</th></tr>
-    <?php if (isset($data) && is_iterable($data) && count((array)$data) > 0): ?>
-        <?php foreach ($data as $row): ?>
-            <tr>
-                <td><?= htmlspecialchars($row['id']); ?></td>
-                <td><?= htmlspecialchars($row['title']); ?></td>
-                <td><?= htmlspecialchars($row['author']); ?></td>
-                <td><?= htmlspecialchars($row['year']); ?></td>
-                <td>
-                    <a href="index.php?action=edit&id=<?= urlencode($row['id']); ?>">Edit</a> | 
-                    <a href="index.php?action=delete&id=<?= urlencode($row['id']); ?>" onclick="return confirm('Yakin?')">Hapus</a>
-                </td>
-            </tr>
-        <?php endforeach; ?>
-    <?php else: ?>
+    <?php foreach ($data as $row): ?>
         <tr>
-            <td colspan="5" class="muted">Tidak ada data buku.</td>
+            <td><?= $row['id']; ?></td>
+            <td><?= $row['title']; ?></td>
+            <td><?= $row['author']; ?></td>
+            <td><?= $row['year']; ?></td>
+            <td>
+                <a href="index.php?action=edit&id=<?= $row['id']; ?>">Edit</a> | 
+                <a href="index.php?action=delete&id=<?= $row['id']; ?>" onclick="return confirm('Yakin?')">Hapus</a>
+            </td>
         </tr>
-    <?php endif; ?>
+    <?php endforeach; ?>
 </table>
             <div id="booksGrid" class="books-grid" aria-live="polite"></div>
             <template id="bookTemplate">
